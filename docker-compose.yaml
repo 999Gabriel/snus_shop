@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./web:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: macintosh
+      MYSQL_DATABASE: snus_shop
+      MYSQL_USER: root
+      MYSQL_PASSWORD: macintosh
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--silent"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
