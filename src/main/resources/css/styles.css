@@ -1,0 +1,75 @@
+/* Hintergrundfarbe für das GridPane */
+.grid-pane {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 15px;
+    -fx-hgap: 10px;
+    -fx-vgap: 12px;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+/* Beschriftungen (Labels) */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+/* Textfelder */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4px;
+    -fx-padding: 6px 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-focus-color: #4CAF50;
+    -fx-border-width: 1px;
+}
+
+/* Hover-Effekt für Textfelder */
+.text-field:hover {
+    -fx-border-color: #999999;
+}
+
+/* Fokuseffekt für Textfelder */
+.text-field:focused {
+    -fx-border-color: #4CAF50;
+}
+
+/* Schaltflächen (Buttons) */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+}
+
+/* Hover-Effekt für Schaltflächen */
+.button:hover {
+    -fx-background-color: #45A049;
+}
+
+/* Fokuseffekt für Schaltflächen */
+.button:focused {
+    -fx-background-color: #5ec162;
+}
+
+/* Szene (Scene) */
+.scene {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Insets für die GridPane-Elemente */
+.grid-pane .label {
+    -fx-padding: 0 10px 0 0;
+}
+
+/* Ausrichtung der Komponenten */
+.grid-pane .text-field {
+    -fx-alignment: center-left;
+}
